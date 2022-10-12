@@ -8,6 +8,7 @@ import Statistics from "./components/Statistics/Statistics";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Blog from "./components/Blog/Blog";
+import Error from "./components/Error/Error";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,7 +16,7 @@ function App() {
       path: "/",
       element: <Main></Main>,
       // loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
-      errorElement: <h2>Error</h2>,
+      errorElement: <Error></Error>,
       children: [
         {
           path: "/",
