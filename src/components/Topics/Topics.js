@@ -5,7 +5,7 @@ import Topic from "../Topic/Topic";
 const Topics = () => {
   const quizTopics = useLoaderData();
   return (
-    <div className="flex gap-5 justify-center mt-40">
+    <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-5 w-9/12 mx-auto mt-40">
       {quizTopics.data.map((quiz) => (
         <Topic key={quiz.id} quiz={quiz}></Topic>
       ))}

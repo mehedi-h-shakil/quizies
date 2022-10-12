@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Topic = ({ quiz, handleQuiz }) => {
   const { id, name, logo, total } = quiz;
@@ -13,9 +14,9 @@ const Topic = ({ quiz, handleQuiz }) => {
           <h2 className="card-title">{name}</h2>
           <p className="flex">Questions: {total}</p>
           <div className="card-actions justify-end">
-            <button onClick={() => handleQuiz(id)} className="btn btn-primary">
-              Start Practice
-            </button>
+            <Link to={`/quiz/${id}`}>
+              <button className="btn btn-primary">Start Practice</button>
+            </Link>
           </div>
         </div>
       </div>
