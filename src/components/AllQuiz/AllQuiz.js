@@ -4,7 +4,7 @@ import OptionDetails from "../OptionDetails/OptionDetails";
 import { EyeIcon } from "@heroicons/react/24/solid";
 
 const AllQuiz = ({ qs }) => {
-  const { id, name, question, options, correctAnswer } = qs;
+  const { name, question, options, correctAnswer } = qs;
   //   console.log(id);
   const answerMatch = (option) => {
     if (option === correctAnswer) {
