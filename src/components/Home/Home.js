@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="hero min-h-96 bg-base-200">
+      <div className="hero min-h-96 ">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             className="max-w-sm rounded-lg shadow-2xl"
@@ -28,9 +28,12 @@ const Home = () => {
             alt=""
           />
           <div>
-            <h1 className="text-5xl font-bold">Quizies Here!</h1>
+            <h1 className="text-5xl font-bold">
+              <span className="text-orange-500">Quizies</span> Here!
+            </h1>
             <p className="py-6">
-              Try out our quiz to know to knowledge about the web development.
+              Try out our quiz to learn more about the web development.It will
+              help you in the future.
             </p>
             <Link to="/topics">
               <button className="btn btn-primary">Get Started</button>

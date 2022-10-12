@@ -7,6 +7,7 @@ import Quiz from "./Quiz/Quiz";
 import Statistics from "./components/Statistics/Statistics";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Blog from "./components/Blog/Blog";
 
 function App() {
   const router = createBrowserRouter([
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/statistics",
           element: <Statistics></Statistics>,
+        },
+        {
+          path: "/blogs",
+          element: <Blog></Blog>,
         },
       ],
     },

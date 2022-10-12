@@ -8,7 +8,9 @@ const Quiz = () => {
 
   return (
     <div className="mb-10">
-      <h2 className="text-4xl mt-10">Quiz of {name}</h2>
+      <h2 className="text-4xl mt-10 font-semibold">
+        Quiz of <span className="text-orange-500">{name}</span>
+      </h2>
       <p className="text-xl text-lime-600 p-4 mb-5">Total Quiz: {length}</p>
       {questions.map((qs) => (
         <AllQuiz key={qs.id} qs={qs}></AllQuiz>

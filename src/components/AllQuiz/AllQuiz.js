@@ -19,13 +19,13 @@ const AllQuiz = ({ qs }) => {
   };
 
   return (
-    <div className="border-2 border-indigo-600 mb-10 lg:w-3/6 sm:w-full  h-full mx-auto bg-slate-200">
+    <div className="border-2 drop-shadow-lg mb-10 lg:w-3/6 sm:w-full  h-full mx-auto">
       <div className="flex justify-between">
-        <h2 className="p-5 text-2xl">{question.slice(3, -4)}</h2>
+        <h2 className="p-5 text-2xl ">{question.slice(3, -4)}</h2>
         <div className="p-5">
           <EyeIcon
             onClick={() => toast.success(correctAnswer)}
-            className="h-6 w-6 text-blue-500"
+            className="h-6 w-6 text-primary"
           ></EyeIcon>
         </div>
       </div>
