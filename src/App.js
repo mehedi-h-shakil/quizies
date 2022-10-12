@@ -52,6 +52,10 @@ function App() {
         },
       ],
     },
+    {
+      path: "*",
+      element: <Error></Error>,
+    },
   ]);
 
   return (
