@@ -14,7 +14,7 @@ const AllQuiz = ({ qs }) => {
   };
 
   return (
-    <div className="border-2 border-indigo-600 mb-10 w-3/6 h-full mx-auto bg-red-100">
+    <div className="border-2 border-indigo-600 mb-10 lg:w-3/6 sm:w-full  h-full mx-auto bg-slate-200">
       <h2 className="p-5 text-2xl">{question.slice(3, -4)}</h2>
       <div className="grid lg:grid-cols-2 sm:grid-cols-1">
         {options.map((option) => (

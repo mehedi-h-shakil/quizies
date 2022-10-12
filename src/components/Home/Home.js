@@ -42,9 +42,6 @@ const Home = () => {
         ))}
         ;
       </div>
-      {quizTopic.data.map((quiz) => (
-        <Statistics key={quiz.id} quiz={quiz}></Statistics>
-      ))}
     </div>
   );
 };
