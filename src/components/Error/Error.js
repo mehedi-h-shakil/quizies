@@ -17,9 +17,10 @@ const Error = () => {
               Sorry, we can't find that page. You'll find lots to explore on the
               home page.{" "}
             </p>
+
             <Link
               to="/"
-              className="inline-flex text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-primary-900 my-4"
+              className="inline-flex border-2 border-indigo-600 font-medium rounded-lg text-sm px-5 py-2.5 my-4 text-center hover:bg-slate-200 hover:border-0"
             >
               Back to Homepage
             </Link>
