@@ -4,8 +4,8 @@ import OptionDetails from "../OptionDetails/OptionDetails";
 import { EyeIcon } from "@heroicons/react/24/solid";
 
 const AllQuiz = ({ qs }) => {
-  const { name, question, options, correctAnswer } = qs;
-  //   console.log(id);
+  const { question, options, correctAnswer } = qs;
+  //   console.log(question);
   const answerMatch = (option) => {
     if (option === correctAnswer) {
       toast.success("Correct Answer", {
@@ -33,7 +33,7 @@ const AllQuiz = ({ qs }) => {
         {options.map((option) => (
           <OptionDetails
             option={option}
-            name={name}
+            question={question}
             answerMatch={answerMatch}
           ></OptionDetails>
         ))}

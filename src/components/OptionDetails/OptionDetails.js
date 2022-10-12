@@ -1,6 +1,7 @@
 import React from "react";
 
-const OptionDetails = ({ name, option, answerMatch }) => {
+const OptionDetails = ({ question, option, answerMatch }) => {
+  //   console.log(question);
   return (
     <div className="border-2 border-green-500 rounded-lg m-4 p-5 text-left hover:bg-slate-200">
       <label>
@@ -8,7 +9,7 @@ const OptionDetails = ({ name, option, answerMatch }) => {
           className="mx-2"
           onClick={() => answerMatch(option)}
           type="radio"
-          name={name}
+          name={question}
           value={option}
         />
         {option}
