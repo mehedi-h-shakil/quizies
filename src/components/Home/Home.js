@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Quiz from "../../Quiz/Quiz";
 import Statistics from "../Statistics/Statistics";
 import Topic from "../Topic/Topic";
@@ -32,7 +32,9 @@ const Home = () => {
             <p className="py-6">
               Try out our quiz to know to knowledge about the web development.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <Link to="/topics">
+              <button className="btn btn-primary">Get Started</button>
+            </Link>
           </div>
         </div>
       </div>
