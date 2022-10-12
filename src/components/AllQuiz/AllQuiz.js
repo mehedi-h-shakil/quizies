@@ -1,22 +1,27 @@
 import React from "react";
-import Option from "../Option/Option";
+import { toast } from "react-toastify";
+import OptionDetails from "../OptionDetails/OptionDetails";
 
-const AllQuiz = ({ qs, handleCorrectAns }) => {
-  const { question, options, id, correctAnswer } = qs;
-  console.log(qs);
+const AllQuiz = ({ qs }) => {
+  const { id, question, options, correctAnswer } = qs;
+  //   console.log(id);
+  const answerMatch = (option) => {
+    if (option === correctAnswer) {
+      toast.success("Correct Answer");
+    } else {
+      toast.error("Wrong Answer");
+    }
+  };
+
   return (
-    <div className="border-2 border-indigo-600 mb-10 w-3/6 h-64 mx-auto">
+    <div className="border-2 border-indigo-600 mb-10 w-3/6 h-full mx-auto bg-red-100">
       <h2 className="p-5 text-2xl">{question.slice(3, -4)}</h2>
-      <div className="grid grid-cols-2">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1">
         {options.map((option) => (
-          <li
-            onClick={() => {
-              handleCorrectAns(id, correctAnswer);
-            }}
-            className="border-2 border-indigo-400 p-2 m-4"
-          >
-            {option}
-          </li>
+          <OptionDetails
+            option={option}
+            answerMatch={answerMatch}
+          ></OptionDetails>
         ))}
       </div>
     </div>

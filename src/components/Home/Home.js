@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Quiz from "../../Quiz/Quiz";
+import Statistics from "../Statistics/Statistics";
 import Topic from "../Topic/Topic";
 
 const Home = () => {
@@ -41,6 +42,9 @@ const Home = () => {
         ))}
         ;
       </div>
+      {quizTopic.data.map((quiz) => (
+        <Statistics key={quiz.id} quiz={quiz}></Statistics>
+      ))}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Option = () => {
+const Statistics = () => {
   return <div></div>;
 };
 
-export default Option;
+export default Statistics;

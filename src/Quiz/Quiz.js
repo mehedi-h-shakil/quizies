@@ -5,7 +5,7 @@ import AllQuiz from "../components/AllQuiz/AllQuiz";
 const Quiz = () => {
   const quizData = useLoaderData();
   const { id, name, questions } = quizData.data;
-  console.log(quizData.data);
+  //   console.log(quizData.data);
 
   const [answer, setAnswer] = useState([]);
 
@@ -13,7 +13,7 @@ const Quiz = () => {
     setAnswer(correctAnswer);
   };
 
-  console.log(answer);
+  //   console.log(answer);
 
   return (
     <div>
